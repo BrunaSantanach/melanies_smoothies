@@ -13,7 +13,7 @@ st.write(
 
 ## Name box
 
-name_on_order = st.text_input('Name on Smoothie')
+name_on_order = st.text_input(' Name on Smoothie')
 st.write('The name on your Smoothie will be:', name_on_order)
 
 ## Select box fruits
@@ -51,7 +51,7 @@ if ingredients_list:
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
         st.subheader (fruit_chosen + 'Nutrition Information')
-        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+        smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_choosen)
         sf_df = st.dataframe (data= smoothiefroot_response.json(), use_container_width=True)
       
         
