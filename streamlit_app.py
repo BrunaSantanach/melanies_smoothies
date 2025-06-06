@@ -24,7 +24,6 @@ st.write('The name on your Smoothie will be:', name_on_order)
 
 #st.write("Your favourite fruit is:", option)
 
-
 ## Obrir la sessió per tenir les taules
 
 cnx = st.connection ("snowflake")
@@ -34,7 +33,6 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 #st.stop()
 #convertim amb taula pandas
 pd_df=my_data_frame.to_pandas()
-
 
 ## Els ingredients seleccionats els posem dins una vairable Ingredients
 
